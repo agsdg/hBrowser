@@ -1,0 +1,64 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="setSupportZoom"
+        android:summary="Sets whether the WebView should support zooming using its on-screen zoom controls and gestures."
+        android:title="setSupportZoom" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="setBuiltInZoomControls"
+        android:summary="setBuiltInZoomControls"
+        android:title="setBuiltInZoomControls" />
+     <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="setJavaScriptEnabled"
+        android:summary="setJavaScriptEnabled"
+        android:title="setJavaScriptEnabled" />
+     
+     <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="setAllowFileAccess"
+        android:summary="setAllowFileAccess"
+        android:title="setAllowFileAccess" />
+       <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="setSaveFormData"
+        android:summary="setSaveFormData"
+        android:title="setSaveFormData" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="setAppCacheEnabled"
+        android:summary="setAppCacheEnabled"
+        android:title="setAppCacheEnabled" />
+    
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="setBlockNetworkImage"
+        android:summary="setBlockNetworkImage"
+        android:title="setBlockNetworkImage" />
+   
+   <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="setUseWideViewPort"
+        android:summary="setUseWideViewPort"
+        android:title="setUseWideViewPort" />
+    
+   <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="disableCookies"
+        android:summary="disableCookies"
+        android:title="disableCookies" />
+   <EditTextPreference   
+      
+         android:key="homepage"  
+         android:title="Homepage URL"   
+         android:summary="Set the URL of the webpage that will be loaded when the browser initializes."  
+         android:dialogTitle="Homepage URL" />  
+   
+   
+  
+
+</PreferenceScreen>

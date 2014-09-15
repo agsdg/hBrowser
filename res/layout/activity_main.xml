@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+
+    tools:context="com.example.dsf.MainActivity" >
+    
+   
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="HTML" />
+
+    <Button
+        android:id="@+id/Button01"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toRightOf="@+id/button1"
+        android:text="Headers" />
+    <Button
+        android:id="@+id/Button02"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toRightOf="@+id/Button01"
+        android:text="Edit Html" />
+    
+    <Button
+        android:id="@+id/err"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toRightOf="@+id/Button02"
+        android:text="Console" />
+    
+     <TextView
+        android:id="@+id/html"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:scrollbars = "vertical"
+        android:layout_below="@+id/webView"
+android:layout_above="@+id/Button01" />
+
+     <EditText
+         android:id="@+id/uri"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:background="@null"
+         android:ems="10"
+         android:imeOptions="actionDone"
+         android:inputType="textUri"
+         android:text="" >
+
+       
+     </EditText>
+
+     <ProgressBar
+         android:id="@+id/progressBar"
+         style="?android:attr/progressBarStyleHorizontal"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true" />
+
+     <WebView
+         android:id="@+id/webView"
+         android:layout_width="match_parent"
+          android:layout_height="350dp"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/uri" />
+
+
+</RelativeLayout>

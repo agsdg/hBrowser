@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/refresh"
+        android:title="Refresh"/>
+    <item
+        android:id="@+id/stop"
+        android:title="Stop loading"/>
+     <item
+        android:id="@+id/back"
+        android:title="Back Page"/>
+      <item
+        android:id="@+id/next"
+        android:title="Next Page"/>
+    
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"/>
+
+   
+
+</menu>
