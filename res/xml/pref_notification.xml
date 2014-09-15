@@ -2,15 +2,15 @@
 
       <CheckBoxPreference
         android:defaultValue="true"
-        android:key="interceptPages"
-        android:summary="Enable intercepting and editing request headers of webpages."
+        android:key="Enable intercepting"
+        android:summary="Strongly recommended! You should use the below filter options to cancel intercepting"
         android:title="interceptPages" />
       
       <EditTextPreference   
           android:key="interceptResources"  
-         android:title="Don't Intercept these files"   
-         android:summary="Set which extension(s) of files should NOT be intercepted when loading.\nWITH DOTS BEFORE EXTENSION"  
-         android:dialogTitle="Extension (seperate by a comma(,))" /> 
+         android:title="Don't Intercept URLs that contains these words"   
+         android:summary="You can type extensions such as .jpg,.png\n'http://' for all"  
+         android:dialogTitle="Filter words (seperate by a comma(,))" /> 
          
      
        

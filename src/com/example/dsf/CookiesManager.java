@@ -75,7 +75,8 @@ public class CookiesManager {
      * @param conn a java.net.URLConnection - must be open, or IOException will be thrown
      * @throws java.io.IOException Thrown if conn is not open.
      */
-    public void storeCookies(URLConnection conn) throws IOException {
+    @SuppressWarnings("unchecked")
+	public void storeCookies(URLConnection conn) throws IOException {
 	
 	// let's determine the domain from where these cookies are being sent
 	String domain = getDomainFromHost(conn.getURL().getHost());
@@ -122,10 +123,16 @@ public class CookiesManager {
     
 		while (st.hasMoreTokens()) {
 		    String token  = st.nextToken();
-		    try{
+		   
+		       System.out.println("token;"+token);
+		   // try{
+		    System.out.println();
+		    if(token.indexOf("=")>0&&token.indexOf("=")<(token.length()-1)){
+		   System.out.println(token.substring(token.indexOf(NAME_VALUE_SEPARATOR) + 1, token.length()));
 		    cookie.put(token.substring(0, token.indexOf(NAME_VALUE_SEPARATOR)).toLowerCase(),
 		     token.substring(token.indexOf(NAME_VALUE_SEPARATOR) + 1, token.length()));
-		    }catch(StringIndexOutOfBoundsException e){}
+		   // }catch(StringIndexOutOfBoundsException e){}
+		    }
 		    }
 	    }
 	}
@@ -160,7 +167,8 @@ public class CookiesManager {
 	    // check cookie to ensure path matches  and cookie is not expired
 	    // if all is cool, add cookie to header string 
 	    if (comparePaths((String)cookie.get(PATH), path) && isNotExpired((String)cookie.get(EXPIRES))) {
-		cookieStringBuffer.append(cookieName);
+		System.out.println(0);
+	    	cookieStringBuffer.append(cookieName);
 		cookieStringBuffer.append("=");
 		cookieStringBuffer.append((String)cookie.get(cookieName));
 		if (cookieNames.hasNext()) cookieStringBuffer.append(SET_COOKIE_SEPARATOR);
@@ -186,11 +194,17 @@ public class CookiesManager {
     public boolean isNotExpired(String cookieExpires) {
 	if (cookieExpires == null) return true;
 	Date now = new Date();
+	Date sdf ;
 	try {
-	    return (now.compareTo(dateFormat.parse(cookieExpires))) <= 0;
-	} catch (java.text.ParseException pe) {
-	    pe.printStackTrace();
-	    return false;
+	
+		sdf=new SimpleDateFormat().parse(cookieExpires);
+	    return (now.compareTo(sdf)) <= 0;
+	    //dateFormat.parse(cookieExpires)
+	} catch (ParseException pe) {
+		 pe.printStackTrace();
+		return true;
+	   
+	    
 	}
     }
 

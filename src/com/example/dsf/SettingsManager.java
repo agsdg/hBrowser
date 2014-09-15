@@ -44,7 +44,7 @@ public class SettingsManager {
 		homepage=prefs.getString("homepage", "file:///android_asset/a.html");
 		
 		interceptPages=prefs.getBoolean("interceptPages", true);
-		interceptResources=prefs.getString("interceptResources", "").split(",");
+		interceptResources=prefs.getString("interceptResources", "file:///").split(",");
 	}
 	
 	public void setWebSettings(WebView view){

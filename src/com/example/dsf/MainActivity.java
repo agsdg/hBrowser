@@ -336,6 +336,7 @@ public class MainActivity extends ActionBarActivity {
 		@Override
 	    public WebResourceResponse shouldInterceptRequest(WebView  view, final String  urlNow){
 			if(!shouldIntercept){
+				System.out.println("dun intercept");
 				return null;
 			}
 			if(sm.interceptResources.length>0){
@@ -448,7 +449,7 @@ public class MainActivity extends ActionBarActivity {
 			}*/
 			
 			
-			if(shouldIntercept){
+			//if(shouldIntercept){
 				try {
 					URL urlCheck=new URL(urlNow);
 				} catch (MalformedURLException e1) {
@@ -556,9 +557,9 @@ public class MainActivity extends ActionBarActivity {
 			
 			
 	         return true;
-			}else{
+			/*}else{
 				return false;
-			}
+			}*/
 	    }
 		
 		@Override
